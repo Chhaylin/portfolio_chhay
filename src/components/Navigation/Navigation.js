@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -7,30 +8,51 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navigation() {
+export default function Navigation(props) {
+  // const history = useHistory();
+  // const [selectedOption, setSelectedOption] = useState("");
+
+  // const handleOnChange = (event) => {
+  //   if (event.target.checked && event.target.value === "about")
+  //     history.push("about");
+  //   if (event.target.checked && event.target.value === "/") history.push("/");
+  // };
+
   return (
     <div className="navigation">
-      <nav className="navigation_nav">
-        <input
-          type="radio"
-          name="slideItem"
-          id="slide-item-1"
-          className="slide__toggle"
-        />
-        <label for="slide-item-1" className="slide__label">
-          <FontAwesomeIcon icon={faHome} className="slide__icon" />
-          <span className="slide__text">Home</span>
-        </label>
-        <input
-          type="radio"
-          name="slideItem"
-          id="slide-item-2"
-          className="slide__toggle"
-        />
-        <label for="slide-item-2" className="slide__label">
-          <FontAwesomeIcon icon={faUserCircle} className="slide__icon" />
-          <span className="slide__text">About</span>
-        </label>
+      <nav className="navigation__nav">
+        <Link to="/" className="slide__link">
+          <input
+            type="radio"
+            name="slideItem"
+            id="slide-item-1"
+            className="slide__toggle"
+            checked
+            // value="/"
+            // checked={setSelectedOption === "/"}
+            // onChange={handleOnChange}
+          />
+          <label for="slide-item-1" className="slide__label">
+            <FontAwesomeIcon icon={faHome} className="slide__icon" />
+            <span className="slide__text">Home</span>
+          </label>
+        </Link>
+
+        <Link to="/about" className="slide__link">
+          <input
+            type="radio"
+            name="slideItem"
+            id="slide-item-2"
+            className="slide__toggle"
+            // value="about"
+            // checked={setSelectedOption === "about"}
+            // onChange={handleOnChange}
+          />
+          <label for="slide-item-2" className="slide__label">
+            <FontAwesomeIcon icon={faUserCircle} className="slide__icon" />
+            <span className="slide__text">About</span>
+          </label>
+        </Link>
 
         <input
           type="radio"
@@ -56,9 +78,7 @@ export default function Navigation() {
 
         <div className="clear"></div>
 
-        <div className="slider">
-          <div className="slider__bar"></div>
-        </div>
+        <div className="bar"></div>
       </nav>
     </div>
   );

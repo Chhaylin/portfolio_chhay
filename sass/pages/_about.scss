@@ -1,0 +1,43 @@
+.about {
+  position: relative;
+  // transform: translate(-50%, -50%);
+  display: block;
+
+  &-img {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 70rem;
+    height: 50rem;
+    object-fit: cover;
+    margin: 5rem 0;
+    opacity: 0.1;
+    z-index: -10;
+  }
+
+  &-title {
+    font-size: 4rem;
+    font-family: "Text Me One", sans-serif;
+    color: $color-secondary-green-1;
+    margin: 8rem 0 3rem 10rem;
+  }
+
+  &-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: $color-light-green-2;
+    margin-left: 10rem;
+    margin-bottom: 10rem;
+    width: 65rem;
+    z-index: 10;
+  }
+}
+
+.bold-text {
+  font-style: italic;
+}
+
+.color-text {
+  color: $color-yellowOrange;
+  font-weight: 700;
+}
