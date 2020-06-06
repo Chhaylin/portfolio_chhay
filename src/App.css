@@ -47,8 +47,87 @@ body {
   box-sizing: border-box;
   padding: 0;
   position: relative;
+  background-color: #081c15;
 }
 
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #621708;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #621708;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #621708;
+    border: 0px solid #222;
+    bottom: 13px;
+  }
+}
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 .navigation_nav {
   font-family: "Text Me One", sans-serif;
   max-width: 60rem;
@@ -64,12 +143,12 @@ body {
   text-align: center;
   display: block;
   float: left;
-  color: #081c15;
+  color: #95d5b2;
   opacity: 0.2;
 }
 .slide__label:hover {
   cursor: pointer;
-  color: #2d6a4f;
+  color: #52b788;
 }
 .slide__label .slide__text {
   display: block;
@@ -78,10 +157,10 @@ body {
 }
 .slide__label .slide__icon {
   font-size: 1rem;
-  border: solid 2px #081c15;
+  border: solid 2px #95d5b2;
   text-align: center;
-  height: 6rem;
-  width: 6rem;
+  height: 5.5rem;
+  width: 5.5rem;
   display: block;
   padding: 1.2rem;
   margin: 0 auto;
@@ -97,7 +176,7 @@ body {
   width: 100%;
   height: 0.5rem;
   display: block;
-  background: #ccc;
+  background: #d8f3dc;
   margin-top: 1rem;
   border-radius: 0.5rem;
 }
@@ -105,7 +184,7 @@ body {
 .slider .slider__bar {
   width: 25%;
   height: 0.5rem;
-  background: #333;
+  background: #2d6a4f;
   border-radius: 0.5rem;
 }
 
@@ -134,6 +213,87 @@ body {
 
 .navigation_nav #slide-item-4:checked ~ .slider .slider__bar {
   margin-left: 75%;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__box {
+  width: 50rem;
+  height: 50rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.home__title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 10rem;
+}
+.home__block {
+  width: 0%;
+  height: inherit;
+  background: #95d5b2;
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
+.home__text {
+  font-family: "Text Me One", sans-serif;
+  color: #52b788;
+  font-size: 8rem;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.home__space {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: #621708;
+  animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  margin-left: 5px;
+  margin-top: -10px;
+  position: absolute;
+  bottom: 13px;
+  right: -12px;
+}
+.home__role {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  margin-top: 2rem;
+}
+.home__role-block {
+  width: 0%;
+  height: inherit;
+  background: #d80032;
+  position: absolute;
+  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  display: flex;
+}
+.home__role-text {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 3.2s;
+  opacity: 0;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #ffca3a;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 /*# sourceMappingURL=App.css.map */

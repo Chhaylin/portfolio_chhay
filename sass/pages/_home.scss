@@ -1,0 +1,87 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    width: 50rem;
+    height: 50rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 10rem;
+  }
+
+  &__block {
+    width: 0%;
+    height: inherit;
+    background: $color-light-green-1;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    display: flex;
+  }
+
+  &__text {
+    font-family: "Text Me One", sans-serif;
+    color: $color-secondary-green-2;
+    font-size: 8rem;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+
+  &__space {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: $color-brown;
+    animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 2s;
+    margin-left: 5px;
+    margin-top: -10px;
+    position: absolute;
+    bottom: 13px;
+    right: -12px;
+  }
+
+  &__role {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    margin-top: 2rem;
+
+    &-block {
+      width: 0%;
+      height: inherit;
+      background: $color-red;
+      position: absolute;
+      animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+      animation-delay: 2s;
+      display: flex;
+    }
+
+    &-text {
+      animation: secFadeIn 2s forwards;
+      animation-delay: 3.2s;
+      opacity: 0;
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+      color: $color-yellowOrange;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+  }
+}
