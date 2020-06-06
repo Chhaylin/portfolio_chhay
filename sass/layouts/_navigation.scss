@@ -1,0 +1,90 @@
+.navigation_nav {
+  font-family: "Text Me One", sans-serif;
+  max-width: 60rem;
+  margin: 5rem auto;
+  overflow: hidden;
+}
+
+.slide {
+  &__toggle {
+    display: none;
+  }
+
+  &__label {
+    width: 25%;
+    text-align: center;
+    display: block;
+    float: left;
+    color: $color-primary-green;
+    opacity: 0.2;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-secondary-green;
+    }
+  }
+
+  &__label &__text {
+    display: block;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  &__label &__icon {
+    font-size: 1rem;
+    border: solid 2px $color-primary-green;
+    text-align: center;
+    height: 6rem;
+    width: 6rem;
+    display: block;
+    padding: 1.2rem;
+    margin: 0 auto;
+    line-height: 5rem;
+    border-radius: 50%;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+//slider
+.slider {
+  width: 100%;
+  height: 0.5rem;
+  display: block;
+  background: $color-light-grey;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.slider .slider__bar {
+  width: 25%;
+  height: 0.5rem;
+  background: $color-dark-grey;
+  border-radius: 0.5rem;
+}
+
+.slide__label,
+.slider .slider__bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+.slide__toggle:checked + .slide__label {
+  opacity: 1;
+}
+
+.navigation_nav #slide-item-1:checked ~ .slider .slider__bar {
+  margin-left: 0;
+}
+.navigation_nav #slide-item-2:checked ~ .slider .slider__bar {
+  margin-left: 25%;
+}
+.navigation_nav #slide-item-3:checked ~ .slider .slider__bar {
+  margin-left: 50%;
+}
+.navigation_nav #slide-item-4:checked ~ .slider .slider__bar {
+  margin-left: 75%;
+}
