@@ -36,6 +36,115 @@ export default function About() {
         </p>
       </div>
       <img src={Pro_pic} alt="profile pic" className="about-img" />
+
+      <div className="timeline">
+        <h1 className="timeline__title">Education &amp; Works </h1>
+        <div className="flex-parent">
+          <div className="input-flex-container">
+            <input
+              className="timeline__input"
+              type="radio"
+              name="timeline-dot"
+              data-description="2009"
+            />
+            <div className="dot-info" data-description="2009">
+              <span className="year">2009</span>
+              <span className="label">University of Amsterdam</span>
+            </div>
+            <input
+              className="timeline__input"
+              type="radio"
+              name="timeline-dot"
+              data-description="2011"
+            />
+            <div className="dot-info" data-description="2011">
+              <span className="year">2011</span>
+              <span className="label">University of Macau</span>
+            </div>
+            <input
+              className="timeline__input"
+              type="radio"
+              name="timeline-dot"
+              data-description="2013"
+            />
+            <div className="dot-info" data-description="2013">
+              <span className="year">2013</span>
+              <span className="label">University College Dublin</span>
+            </div>
+            <input
+              className="timeline__input"
+              type="radio"
+              name="timeline-dot"
+              data-description="2014"
+            />
+            <div className="dot-info" data-description="2014">
+              <span className="year">2014</span>
+              <span className="label">Mises University</span>
+            </div>
+            <input
+              className="timeline__input"
+              type="radio"
+              name="timeline-dot"
+              data-description="2015"
+            />
+            <div className="dot-info" data-description="2015">
+              <span className="year">2015</span>
+              <span className="label">Eneco</span>
+            </div>
+            <input
+              className="timeline__input"
+              type="radio"
+              name="timeline-dot"
+              data-description="2016"
+            />
+            <div className="dot-info" data-description="2016">
+              <span className="year">2016</span>
+              <span className="label">European Merchant Services</span>
+            </div>
+            <input
+              className="timeline__input"
+              type="radio"
+              name="timeline-dot"
+              data-description="2018-03"
+            />
+            <div className="dot-info" data-description="2018-03">
+              <span className="year">2018-03</span>
+              <span className="label">Serey</span>
+            </div>
+            <input
+              className="timeline__input"
+              type="radio"
+              name="timeline-dot"
+              data-description="2018-08"
+            />
+            <div className="dot-info" data-description="2018-08">
+              <span className="year">2018-08</span>
+              <span className="label">Saxion University</span>
+            </div>
+
+            <div id="timeline-descriptions-wrapper">
+              <p data-description="2009">
+                Bachelor of Science, Economics and Business
+              </p>
+              <p data-description="2011">
+                Exchange Program, Philosophy and Economics
+              </p>
+              <p data-description="2013">
+                Master of Arts, Philosophy and Public Affairs
+              </p>
+              <p data-description="2014">
+                Visiting Student on Scholarship, Economics and Philosophy
+              </p>
+              <p data-description="2015">Junior Sitecore Developer</p>
+              <p data-description="2016">
+                Technical Integration Specialist E-commerce
+              </p>
+              <p data-description="2018-03">Co-Founder</p>
+              <p data-description="2018-08">Blockchain Lecturer/Researcher</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

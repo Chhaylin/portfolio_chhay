@@ -43,3 +43,155 @@
   color: $color-yellowOrange;
   font-weight: 700;
 }
+
+.timeline {
+  color: $color-light-green-1;
+  font-family: "Montserrat", sans-serif;
+  padding: 6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__title {
+    font-size: 4rem;
+    font-family: "Text Me One", sans-serif;
+    color: $color-secondary-green-1;
+    margin: 0 0 12rem 7rem;
+  }
+}
+
+.flex-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.input-flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80vw;
+  max-width: 1000px;
+  position: relative;
+  z-index: 0;
+  margin-left: calc((80vw - 25px) / 20);
+}
+
+.timeline__input {
+  width: 25px;
+  height: 25px;
+  background-color: $color-secondary-green-1;
+  position: relative;
+  border-radius: 50%;
+  display: block;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-secondary-green-1;
+    width: 4.5vw;
+    height: 5px;
+    max-width: 50px;
+  }
+
+  &::before {
+    left: calc(-5vw + 12px);
+  }
+
+  &::after {
+    right: calc(-5vw + 12px);
+  }
+
+  &:checked {
+    background-color: $color-secondary-green-1;
+  }
+  &:checked::before {
+    background-color: $color-secondary-green-1;
+  }
+  &:checked::after {
+    background-color: #aeb6bf;
+  }
+
+  &:checked ~ &,
+  &:checked ~ &::before,
+  &:checked ~ &::after {
+    background-color: #aeb6bf;
+  }
+
+  &:checked + .dot-info span {
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.dot-info {
+  width: 25px;
+  height: 25px;
+  display: block;
+  visibility: hidden;
+  position: relative;
+  z-index: -1;
+  left: calc((((80vw - 25px) / 20) * -1) - 1px);
+
+  & span {
+    visibility: visible;
+    position: absolute;
+    font-size: 12px;
+  }
+
+  & span.year {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & span.label {
+    top: -65px;
+    left: 0;
+    transform: rotateZ(-45deg);
+    width: 70px;
+    text-indent: -10px;
+  }
+}
+
+#timeline-descriptions-wrapper {
+  width: 100%;
+  margin-top: 8rem;
+  font-size: 22px;
+  font-weight: 400;
+  margin-left: calc((-80vw - 25px) / 20);
+
+  & p {
+    margin-top: 0;
+    display: none;
+  }
+}
+
+// magic shenanigans
+$descriptions: "2009", "2011", "2013", "2014", "2015", "2016", "2018-03",
+  "2018-08";
+
+@each $desc in $descriptions {
+  input[data-description="#{$desc}"]:checked
+    ~ #timeline-descriptions-wrapper
+    p[data-description="#{$desc}"] {
+    display: block;
+  }
+}
