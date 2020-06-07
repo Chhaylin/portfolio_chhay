@@ -10,7 +10,9 @@
     width: 70rem;
     height: 50rem;
     object-fit: cover;
-    margin: 5rem 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
     opacity: 0.1;
     z-index: -10;
   }
@@ -27,7 +29,7 @@
     font-size: 2rem;
     color: $color-light-green-2;
     margin-left: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
     width: 65rem;
     z-index: 10;
   }

@@ -129,10 +129,26 @@ body {
     opacity: 0.5;
   }
 }
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  opacity: 0.15;
+  overflow: hidden;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .navigation__nav {
   font-family: "Text Me One", sans-serif;
   max-width: 60rem;
-  margin: 5rem auto;
+  margin: 2rem auto;
   overflow: hidden;
 }
 
@@ -275,7 +291,8 @@ body {
   width: 70rem;
   height: 50rem;
   object-fit: cover;
-  margin: 5rem 0;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   opacity: 0.1;
   z-index: -10;
 }
@@ -290,7 +307,7 @@ body {
   font-size: 2rem;
   color: #b7e4c7;
   margin-left: 10rem;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   width: 65rem;
   z-index: 10;
 }
@@ -302,6 +319,98 @@ body {
 .color-text {
   color: #ffca3a;
   font-weight: 700;
+}
+
+.form {
+  position: relative;
+  width: 60rem;
+  margin: 6rem auto 0 auto;
+}
+.form__input {
+  font-family: "Text Me One", sans-serif;
+  font-size: 2.5rem;
+  width: 60rem;
+  height: 9rem;
+  padding: 0px 2rem 0px 2rem;
+  background: transparent;
+  outline: none;
+  color: #95d5b2;
+  border: solid 2px #95d5b2;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+}
+.form__input:hover {
+  background: #1b4332;
+  color: #d8f3dc;
+}
+.form__input::placeholder {
+  color: #b7e4c7;
+  font-size: 2.5rem;
+}
+.form__input:focus::placeholder {
+  color: #1b4332;
+}
+.form__input:hover::-webkit-input-placeholder {
+  color: #ffca3a;
+  font-size: 2.5rem;
+}
+.form__input:hover:focus::-webkit-input-placeholder {
+  color: #d80032;
+}
+.form__textarea {
+  width: 60rem;
+  max-width: 60rem;
+  height: 35rem;
+  max-height: 35rem;
+  padding: 15px;
+  background: transparent;
+  outline: none;
+  color: #95d5b2;
+  font-family: "Text Me One", sans-serif;
+  font-size: 2.5em;
+  border: solid 2px #95d5b2;
+  transition: all 0.3s ease-in-out;
+}
+.form__textarea:hover {
+  background: #1b4332;
+  color: #d8f3dc;
+}
+.form__textarea::placeholder {
+  color: #b7e4c7;
+  font-size: 2.5rem;
+}
+.form__textarea:focus::placeholder {
+  color: #1b4332;
+}
+.form__textarea:hover::-webkit-input-placeholder {
+  color: #ffca3a;
+  font-size: 2.5rem;
+}
+.form__textarea:focus::-webkit-input-placeholder {
+  color: #d80032;
+}
+.form__submit {
+  width: 60rem;
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  font-family: "Text Me One", sans-serif;
+  font-size: 3rem;
+  color: #b7e4c7;
+  outline: none;
+  cursor: pointer;
+  background-color: #1b4332;
+  border: solid 2px #95d5b2;
+  border-top: none;
+}
+.form__submit:hover {
+  color: #081c15;
+}
+.form__message {
+  margin-top: 20rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #b7e4c7;
+  font-family: "Text Me One", sans-serif;
 }
 
 /*# sourceMappingURL=App.css.map */

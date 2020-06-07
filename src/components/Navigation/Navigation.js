@@ -9,15 +9,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation(props) {
-  // const history = useHistory();
-  // const [selectedOption, setSelectedOption] = useState("");
-
-  // const handleOnChange = (event) => {
-  //   if (event.target.checked && event.target.value === "about")
-  //     history.push("about");
-  //   if (event.target.checked && event.target.value === "/") history.push("/");
-  // };
-
   return (
     <div className="navigation">
       <nav className="navigation__nav">
@@ -28,9 +19,6 @@ export default function Navigation(props) {
             id="slide-item-1"
             className="slide__toggle"
             checked
-            // value="/"
-            // checked={setSelectedOption === "/"}
-            // onChange={handleOnChange}
           />
           <label for="slide-item-1" className="slide__label">
             <FontAwesomeIcon icon={faHome} className="slide__icon" />
@@ -44,9 +32,6 @@ export default function Navigation(props) {
             name="slideItem"
             id="slide-item-2"
             className="slide__toggle"
-            // value="about"
-            // checked={setSelectedOption === "about"}
-            // onChange={handleOnChange}
           />
           <label for="slide-item-2" className="slide__label">
             <FontAwesomeIcon icon={faUserCircle} className="slide__icon" />
@@ -65,16 +50,18 @@ export default function Navigation(props) {
           <span className="slide__text">Works</span>
         </label>
 
-        <input
-          type="radio"
-          name="slideItem"
-          id="slide-item-4"
-          className="slide__toggle"
-        />
-        <label for="slide-item-4" className="slide__label">
-          <FontAwesomeIcon icon={faEnvelope} className="slide__icon" />
-          <span className="slide__text">Contact</span>
-        </label>
+        <Link to="/contact" className="slide__link">
+          <input
+            type="radio"
+            name="slideItem"
+            id="slide-item-4"
+            className="slide__toggle"
+          />
+          <label for="slide-item-4" className="slide__label">
+            <FontAwesomeIcon icon={faEnvelope} className="slide__icon" />
+            <span className="slide__text">Contact</span>
+          </label>
+        </Link>
 
         <div className="clear"></div>
 

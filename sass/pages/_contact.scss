@@ -1,0 +1,117 @@
+.form {
+  position: relative;
+  width: 60rem;
+  margin: 6rem auto 0 auto;
+
+  &__input {
+    font-family: "Text Me One", sans-serif;
+    font-size: 2.5rem;
+    width: 60rem;
+    height: 9rem;
+    padding: 0px 2rem 0px 2rem;
+
+    background: transparent;
+    outline: none;
+    color: $color-light-green-1;
+
+    border: solid 2px $color-light-green-1;
+    border-bottom: none;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: $color-primary-green-2;
+      color: $color-light-green-3;
+    }
+
+    &::placeholder {
+      color: $color-light-green-2;
+      font-size: 2.5rem;
+    }
+
+    &:focus::placeholder {
+      color: $color-primary-green-2;
+    }
+
+    &:hover::-webkit-input-placeholder {
+      color: $color-yellowOrange;
+      font-size: 2.5rem;
+    }
+
+    &:hover:focus::-webkit-input-placeholder {
+      color: $color-red;
+    }
+  }
+
+  &__textarea {
+    width: 60rem;
+    max-width: 60rem;
+    height: 35rem;
+    max-height: 35rem;
+    padding: 15px;
+
+    background: transparent;
+    outline: none;
+
+    color: $color-light-green-1;
+    font-family: "Text Me One", sans-serif;
+    font-size: 2.5em;
+
+    border: solid 2px $color-light-green-1;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: $color-primary-green-2;
+      color: $color-light-green-3;
+    }
+
+    &::placeholder {
+      color: $color-light-green-2;
+      font-size: 2.5rem;
+    }
+
+    &:focus::placeholder {
+      color: $color-primary-green-2;
+    }
+
+    &:hover::-webkit-input-placeholder {
+      color: $color-yellowOrange;
+      font-size: 2.5rem;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: $color-red;
+    }
+  }
+
+  &__submit {
+    width: 60rem;
+
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+
+    font-family: "Text Me One", sans-serif;
+
+    font-size: 3rem;
+    color: $color-light-green-2;
+
+    outline: none;
+    cursor: pointer;
+    background-color: $color-primary-green-2;
+    border: solid 2px $color-light-green-1;
+    border-top: none;
+
+    &:hover {
+      color: $color-primary-green-1;
+    }
+  }
+
+  &__message {
+    margin-top: 20rem;
+    text-align: center;
+    font-size: 3rem;
+    color: $color-light-green-2;
+    font-family: "Text Me One", sans-serif;
+  }
+}
