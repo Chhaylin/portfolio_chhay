@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -39,16 +39,18 @@ export default function Navigation(props) {
           </label>
         </Link>
 
-        <input
-          type="radio"
-          name="slideItem"
-          id="slide-item-3"
-          className="slide__toggle"
-        />
-        <label for="slide-item-3" className="slide__label">
-          <FontAwesomeIcon icon={faTools} className="slide__icon" />
-          <span className="slide__text">Works</span>
-        </label>
+        <Link to="/works" className="slide__link">
+          <input
+            type="radio"
+            name="slideItem"
+            id="slide-item-3"
+            className="slide__toggle"
+          />
+          <label for="slide-item-3" className="slide__label">
+            <FontAwesomeIcon icon={faTools} className="slide__icon" />
+            <span className="slide__text">Works</span>
+          </label>
+        </Link>
 
         <Link to="/contact" className="slide__link">
           <input
